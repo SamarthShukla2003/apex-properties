@@ -20,14 +20,18 @@ const initThreeJS = () => {
     pointLight.position.set(5, 5, 5);
     scene.add(pointLight);
 
+    const blueLight = new THREE.PointLight(0x0077ff, 1); // Subtle blue fill light
+    blueLight.position.set(-5, -5, 5);
+    scene.add(blueLight);
+
     // Objects (Architectural Blocks)
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshStandardMaterial({ 
-        color: 0x0b1d3a, 
-        metalness: 0.7, 
-        roughness: 0.2,
+        color: 0xd4af37, // Gold color for better visibility
+        metalness: 0.8, 
+        roughness: 0.1,
         transparent: true,
-        opacity: 0.8
+        opacity: 0.9
     });
 
     const cubes = [];
